@@ -1,0 +1,28 @@
+body {
+    background-color: #ffffff;
+}
+
+.profile-card {
+    background-color: #ebebeb;
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+

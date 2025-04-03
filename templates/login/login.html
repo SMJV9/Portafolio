@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/869dc8f5ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/styles3.css">
+    <title>Login/Register</title>
+  </head>
+  <body>
+      <!-- Mostrar mensajes flash -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+        <!-- Contenedor para la cuenta regresiva -->
+        {% if tiempo_restante and tiempo_restante > 0 %}
+        <div class="countdown-container">
+            <p>Por favor espera <span id="countdown">{{ tiempo_restante }}</span> segundos antes de intentarlo de nuevo.</p>
+        </div>
+        {% endif %}
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+        <form action="/register" method="POST">
+            <h1>Crea tu Cuenta</h1>
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Correo Electrónico" required />
+            <input type="password" name="contrasena" placeholder="Contraseña" required />
+            <button type="submit">Registrar</button>
+        </form>
+        </div> 
+
+
+      <!-- Formulario de login -->
+      <div class="form-container sign-in-container">
+        <form action="/login" method="POST">
+          <h1>Iniciar Sesión</h1>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="contrasena" placeholder="Contraseña" required />
+          <a href="#">Olvidaste tu contraseña?</a>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+
+      <!-- Panel de superposición -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>¡Bienvenido!</h1>
+            <p>Inicia sesión con tu cuenta</p>
+            <button class="ghost" id="signIn">Inicia sesión</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hola!!!</h1>
+            <p>Crear tu cuenta</p>
+            <button class="ghost" id="signUp">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para volver al inicio -->
+    <div class="back-home-container">
+        <a href="/" class="back-home-button">Volver al inicio</a>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+
+#about, #contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.small-img {
+    width: 100px; /* Tamaño más pequeño */
+    height: auto;  /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    border-radius: 50%; /* Mantiene el borde redondo */
+}
+
+.enlaces-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+main {
+    flex: 1; /* Esto empuja el footer hacia abajo */
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+.title-label {
+    color: #d32f2f; /* Rojo más elegante */
+    font-weight: 600;
+}
+.btn-outline-danger {
+    border-color: #d32f2f;
+    color: #d32f2f;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-danger:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+.btn-outline-danger {
+    border: none;
+    background-color: transparent;
+    color: #d32f2f;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-outline-danger:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+ /* Efecto hover en la barra de navegación */
+ .navbar-brand:hover, .nav-link:hover {
+    color: #ff4757 !important; /* Rojo brillante */
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto en el botón de búsqueda */
+.btn-outline-light:hover {
+    background-color: #ff4757;
+    border-color: #ff4757;
+    color: white;
+}
+
+/* Efecto en el input de búsqueda */
+.form-control:hover {
+    border-color: #ff4757;
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.5);
+}  
+/* Efecto hover en la imagen */
+.profile-img {
+    width: 150px; /* Tamaño inicial */
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.2); /* Aumenta un 20% al pasar el cursor */
+}
+
+.logo-left {
+    margin-left: -100px; /* Ajusta este valor según sea necesario */
+}

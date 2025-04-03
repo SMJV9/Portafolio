@@ -1,0 +1,91 @@
+{% include 'sitio/cabecera.html' %}
+<title>Portafolio</title>
+<style>
+    /* Estilo para uniformizar las imágenes */
+    .card-img-top {
+        width: 100%;
+        height: 400px; /* Altura fija para todas las imágenes */
+        object-fit: cover; /* Mantiene la proporción cubriendo el espacio */
+        object-position: center; /* Centra la imagen */
+    }
+    
+    /* Opcional: Hacer que todas las tarjetas tengan la misma altura */
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .card-body {
+        flex-grow: 1;
+    }
+</style>
+<body>
+    <nav>
+        <a href="/">Inicio</a> &gt;
+        <span>Portafolio</span>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Mis Proyectos</h1>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Proyecto 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/logowiki.png" class="card-img-top" alt="WikiCraft">
+                    <div class="card-body">
+                        <h5 class="card-title">WikiCraft</h5>
+                        <p class="card-text">Una página sobre el video juego llamado Minecraft, la web trata sobre una wiki sobre el juego donde salen los bloques, objetos y datos curiosos.</p>
+                        <div class="badge bg-warning text-dark me-2">Laravel</div>
+                        <div class="badge bg-secondary me-2">BootStrap</div>
+                        <div class="badge bg-success">MySQL</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/recetario.jpg" class="card-img-top" alt="Recetario">
+                    <div class="card-body">
+                        <h5 class="card-title">Recetario</h5>
+                        <p class="card-text">Un pequeño proyecto de un recetario para Android hecho con flutter y conectado por API para que se actualicen los datos.</p>
+                        <div class="badge bg-primary me-2">Flutter</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyecto 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/uthlogo.png" class="card-img-top" alt="Proyecto Integral">
+                    <div class="card-body">
+                        <h5 class="card-title">Integral</h5>
+                        <p class="card-text">Un proyecto para la universidad(UTH) sobre los puntos extracurriculares, todo para llevar el control de los puntos, los grupos y los alumnos, todo automatizado en computadora.</p>
+                        <div class="badge bg-info text-dark me-2">C#</div>
+                        <div class="badge bg-success me-2">MySQL</div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Proyecto 3 -->
+             <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/CGSuite.png" class="card-img-top" alt="Recetario">
+                    <div class="card-body">
+                        <h5 class="card-title">CGSuite</h5>
+                        <p class="card-text">Proyecto realizado en las estadias de TSU, trata sobre una manejradora de documentos y de agendas de citas para reunciones estatales.</p>
+                        <div class="badge bg-warning me-2">Laravel</div>
+                        <div class="badge bg-secondary me-2">BootStrap</div>
+                        <div class="badge bg-success">MySQL</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{% include 'sitio/pie.html' %}
